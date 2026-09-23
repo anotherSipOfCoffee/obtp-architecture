@@ -1,12 +1,7 @@
 # OBTP Architecture
 
-Independent repository for the Architecture project. Website files are in `dist/`.
-Static HTML/CSS/JavaScript; no build or server required.
+Independent architectural configurator. Application source is the static dist tree; this consolidation leaves every application and deployment file unchanged. No existing System dependency was found, so no artificial integration is added.
 
-## GitHub Pages
-The deployment workflow in `.github/workflows/pages.yml` publishes `dist/` on pushes to `main` or a manual workflow run. No build step is required.
+Read 00_START_HERE.md and AGENTS.md for the Drive master / GitHub development relationship. Documentation changes are on dev/obtp-independent-v1-20260923; main/live are unchanged.
 
-One-time setup: in repository Settings → Pages → Build and deployment, select **GitHub Actions** as the source. Then run **Deploy GitHub Pages** from Actions, or re-run the initial failed run. The connected plugin cannot change the Pages source setting.
-
-## Status
-Imported from OBTP Project System v74 into this public GitHub repository with owner approval. Website files are in dist/. GitHub Pages deployment workflow is committed. A successful deployment has not yet been verified. GitHub Pages is the selected hosting target.
+The existing Pages workflow deploys dist on main or manual invocation; do not run it in this task. Analytics remains disabled without valid user configuration. Preserve the light interface, camera behaviour, geometry-based PDF drawings and intentional catalogue data.
