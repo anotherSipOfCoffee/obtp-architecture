@@ -1,0 +1,3 @@
+# OBTP Architecture agent rules
+Keep this project separate from Studio, Architecture and System siblings. Make coherent batches and ask questions only at material decisions. No supplier outreach. Never claim geometric studies are construction-ready. Update Drive/package only when requested. Preserve live hosting until a replacement deployment is confirmed. Do not commit credentials.
+Fixed light UI, neutral gray stage, compact controls, fixed camera between exterior/inside. Plan is PDF-only. All PDF drawings derive from selected geometry. Existing catalogue has uneven maturity. Analytics stays off without valid user-provided configuration.
