@@ -1,3 +1,7 @@
+## R04 dressing pockets — 24 September 2026
+
+All 24 draft plans and PDFs include the main-bedroom pocket study. Door, window and desk coordination remains open. Existing 3D and cuts are unchanged. See [R04 scope and limitations](docs/PLAN_REVIEW_R04.md).
+
 ## Plan review update — 24 September 2026
 
 The live configurator now offers 24 two-storey planning options and monochrome PDF plans. Only B3-O1-C-F1 includes the user-edited R03 bathrooms; all options remain drafts. The existing 3D model and Inside/cut view remain unchanged and independent of the new plan selection. See [implementation and refinement notes](docs/PLAN_REVIEW_R03.md).

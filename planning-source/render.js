@@ -40,7 +40,11 @@ function plan(m,index,{furniture=true,clearances=false,dimensions=true}={}){
  if(furniture)for(const q of f.furniture){
   s+=rect(q,`class="furn" ${q.type==='shower'?'fill-opacity=".65"':''}`);
   if(q.type==='bed'){
-   if(q.head==='west'){
+   if(q.head==='east'){
+    s+=rect({x:q.x+q.w-420,y:q.y+60,w:380,h:q.h-120},'fill="#ffffff" stroke="#000000" stroke-width="10"');
+    s+=line(q.x+q.w-420,q.y+q.h/2,q.x+q.w-40,q.y+q.h/2,'stroke="#000000"');
+    s+=line(q.x+q.w-600,q.y,q.x+q.w-600,q.y+q.h,'stroke="#000000"');
+   }else if(q.head==='west'){
     s+=rect({x:q.x+40,y:q.y+60,w:380,h:q.h-120},'fill="#eee9de" stroke="#536567" stroke-width="10"');
     if(q.h>1000)s+=line(q.x+40,q.y+q.h/2,q.x+420,q.y+q.h/2,'stroke="#536567"');
     s+=line(q.x+600,q.y,q.x+600,q.y+q.h,'stroke="#536567"');
@@ -84,7 +88,9 @@ function plan(m,index,{furniture=true,clearances=false,dimensions=true}={}){
  for(const r of f.rooms){
   if(r.kind==='stair')continue;
   let x,y;
-  if(r.id==='g-living'){x=L-3300;y=4020;}
+  if(r.id==='main-pocket'){const q=r.rects[0];x=q.x+1050;y=q.y+q.h-400;}
+  else if(r.id==='bed1'){const q=r.rects[0];x=q.x+q.w/2;y=q.y+320;}
+  else if(r.id==='g-living'){x=L-3300;y=4020;}
   else if(r.kind==='wet'){x=4880;y=5030;}
   else if(r.kind==='hall'){x=r.id==='g-hall'?2350:(m.input.bedrooms===3?2100:4300);y=3850;}
   else if(r.id==='g-office'){x=1550;y=2350;}
@@ -93,9 +99,9 @@ function plan(m,index,{furniture=true,clearances=false,dimensions=true}={}){
   else if(r.id==='dressing'){x=(5400+L)/2;y=2100;}
   else {const q=r.rects[0];x=q.x+q.w*.57;y=2250;}
   const label=r.kind==='wet'?(r.id==='g-wet'?(m.input.bathrooms===2?'Shower / WC':'WC / laundry'):'Bathroom'):r.name;
-  s+=text(x,y,label,r.kind==='wet'?110:140,'class="label"');
+  s+=text(x,y,label,r.id==='main-pocket'?90:r.kind==='wet'?110:140,'class="label"');
   s+=text(x,y-185,`${r.area.toFixed(1)} m²`,115);
-  if(dimensions&&r.rects.length===1&&r.kind!=='wet'&&r.kind!=='hall')s+=text(x,y-345,`${(r.rects[0].w/1000).toFixed(2)} × ${(r.rects[0].h/1000).toFixed(2)} m`,100);
+  if(dimensions&&r.id!=='bed1'&&r.id!=='main-pocket'&&r.rects.length===1&&r.kind!=='wet'&&r.kind!=='hall')s+=text(x,y-345,`${(r.rects[0].w/1000).toFixed(2)} × ${(r.rects[0].h/1000).toFixed(2)} m`,100);
  }
  if(index===0&&!m.input.office)s+=text(1650,2250,'Reading / flexible space',135,'class="label"');
  if(dimensions){
