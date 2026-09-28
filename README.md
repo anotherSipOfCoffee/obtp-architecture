@@ -1,25 +1,12 @@
-## R04 dressing pockets — 24 September 2026
-
-All 24 draft plans and PDFs include the main-bedroom pocket study. Door, window and desk coordination remains open. Existing 3D and cuts are unchanged. See [R04 scope and limitations](docs/PLAN_REVIEW_R04.md).
-
-## Plan review update — 24 September 2026
-
-The live configurator now offers 24 two-storey planning options and monochrome PDF plans. Only B3-O1-C-F1 includes the user-edited R03 bathrooms; all options remain drafts. The existing 3D model and Inside/cut view remain unchanged and independent of the new plan selection. See [implementation and refinement notes](docs/PLAN_REVIEW_R03.md).
-
-Browser verification: all 24 selections and PDF responses, selected download filename, URL restoration, mobile overflow, and exact canvas-image equality against the prior exterior and Inside views. Original inline scripts and model data are unchanged. PDF IDs and rendered examples were checked.
-
----
-
 # OBTP Architecture
 
-Independent repository for the Architecture project. Website files are in `dist/`.
-Static HTML/CSS/JavaScript; no build or server required.
+Independent architecture/layout application. Website files are in `dist/`; cleanup does not integrate its generator with System or Studio.
 
-## GitHub Pages
-The deployment workflow in `.github/workflows/pages.yml` publishes `dist/` on pushes to `main` or a manual workflow run. No build step is required.
+## Current recorded design state
+All 24 two-storey draft plan options include the R04 master-bedroom dressing-pocket study. Door/window/desk coordination remains open. The existing 3D and Inside/cut views are independent of the new plan selection and remain unchanged. See [R04 review](docs/PLAN_REVIEW_R04.md) and [R03 review](docs/PLAN_REVIEW_R03.md). These are draft studies, not construction approval.
 
-One-time setup: in repository Settings → Pages → Build and deployment, select **GitHub Actions** as the source. Then run **Deploy GitHub Pages** from Actions, or re-run the initial failed run. The connected plugin cannot change the Pages source setting.
+Read [Start here](00_START_HERE.md) and [AGENTS.md](AGENTS.md) before changes. The supplier-based autonomous pipeline described there is future direction, not proof of an implemented interchangeable system.
 
-## Status
-Imported from OBTP Project System v74 into this public GitHub repository with owner approval. Website files are in dist/. GitHub Pages deployment workflow is committed. A successful deployment has not yet been verified. GitHub Pages is the selected hosting target.
+GitHub owns editable source. [Drive project documents](https://drive.google.com/drive/folders/1w4ZBlEJSDoW2iE9MoSV8V_f9AOT2Ja-C) hold reference studies, planning and historical records. The standalone wardrobe study archive is research evidence; the current repository, not that older archive's README, determines what has been implemented.
 
+Pages publishes `dist/` on main/manual dispatch. No setup/deployment action is required by this cleanup; no site, plan or model behaviour is changed.
